@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02F6F2F529B252CA00FA6719 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02F6F2F429B252CA00FA6719 /* main.cpp */; };
+		02F6F30029B2570500FA6719 /* student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02F6F2FE29B2570500FA6719 /* student.cpp */; };
+		02F6F30329B2571500FA6719 /* roster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02F6F30129B2571500FA6719 /* roster.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		02F6F2F129B252CA00FA6719 /* C867 PA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C867 PA"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F6F2F429B252CA00FA6719 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		02F6F2FC29B256F200FA6719 /* degree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = degree.hpp; sourceTree = "<group>"; };
+		02F6F2FE29B2570500FA6719 /* student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = student.cpp; sourceTree = "<group>"; };
+		02F6F2FF29B2570500FA6719 /* student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = student.hpp; sourceTree = "<group>"; };
+		02F6F30129B2571500FA6719 /* roster.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = roster.cpp; sourceTree = "<group>"; };
+		02F6F30229B2571500FA6719 /* roster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = roster.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				02F6F2F429B252CA00FA6719 /* main.cpp */,
+				02F6F2FC29B256F200FA6719 /* degree.hpp */,
+				02F6F2FF29B2570500FA6719 /* student.hpp */,
+				02F6F2FE29B2570500FA6719 /* student.cpp */,
+				02F6F30229B2571500FA6719 /* roster.hpp */,
+				02F6F30129B2571500FA6719 /* roster.cpp */,
 			);
 			path = "C867 PA";
 			sourceTree = "<group>";
@@ -120,6 +132,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				02F6F2F529B252CA00FA6719 /* main.cpp in Sources */,
+				02F6F30329B2571500FA6719 /* roster.cpp in Sources */,
+				02F6F30029B2570500FA6719 /* student.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
