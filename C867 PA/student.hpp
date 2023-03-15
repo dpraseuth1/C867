@@ -7,7 +7,7 @@ using namespace std;
 class Student{
 public:
     Student();
-    Student(string studentID, string firstName, string lastName, string email, string age, int daysInCourse[], DegreeProgram degreeProgram);
+    Student(string studentID, string firstName, string lastName, string email, int age, int daysInCourse[], DegreeProgram degreeProgram);
     ~Student();
     
     //getters
@@ -15,7 +15,7 @@ public:
     string getFirstName();
     string getLastName();
     string getEmail();
-    string getAge();
+    int getAge();
     int* getDaysInCourse();
     DegreeProgram getDegreeProgram();
     
@@ -24,7 +24,7 @@ public:
     void setFirstName(string firstNameSet);
     void setLastName(string lastNameSet);
     void setEmail(string emailSet);
-    void setAge(string ageSet);
+    void setAge(int ageSet);
     void setDaysInCourse(int daysInCourseSet[]);
     void setDegreeProgram(DegreeProgram degreeSet);
     
