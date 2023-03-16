@@ -4,6 +4,7 @@ using namespace std;
 #include "student.hpp"
 #include "degree.hpp"
 
+//constructor
 Student::Student() {
     this->studentID = "";
     this->firstName = "";
@@ -28,6 +29,7 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     
 }
 
+//destructor
 Student::~Student() {
     
 }
@@ -84,6 +86,6 @@ void Student::setDegreeProgram(DegreeProgram degreeSet) {
 //print student data
 void Student::print() {
     cout << getStudentID() << "\t" << "First Name: " << getFirstName() << "\t" << "Last Name: " << getLastName() << "\t" << "Age: " << getAge() << "\t";
-    cout << "daysInCourse:  {" << getDaysInCourse()[0] << ", " << getDaysInCourse()[1] << ", " << getDaysInCourse()[2] << "} " << "Degree Program: ";
+    cout << "Days In Course:  {" << getDaysInCourse()[0] << ", " << getDaysInCourse()[1] << ", " << getDaysInCourse()[2] << "} " << "Degree Program: ";
     cout << degreeProgramStrings[(int)getDegreeProgram()] << endl;
 }

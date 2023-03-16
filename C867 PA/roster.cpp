@@ -1,11 +1,10 @@
 #include <iostream>
 #include <string>
-#include <regex>
 using namespace std;
 #include "roster.hpp"
 
 
-void Roster::parse1(string row) {
+void Roster::parseData(string row) {
     int rhs = row.find(",");
     string studentID = row.substr(0, rhs);
 
@@ -19,7 +18,7 @@ void Roster::parse1(string row) {
 
     lhs = rhs + 1;
     rhs = row.find(",", lhs);
-    string emailAddress = row.substr(lhs, rhs - lhs);
+    string email = row.substr(lhs, rhs - lhs);
 
     lhs = rhs + 1;
     rhs = row.find(",", lhs);
@@ -51,7 +50,7 @@ void Roster::parse1(string row) {
         degreeProgram = DegreeProgram::SOFTWARE;
     }
 
-    add(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
+    add(studentID, firstName, lastName, email, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
 }
 
 
@@ -59,13 +58,12 @@ void Roster::parse1(string row) {
 void Roster::add(string studentID, string firstName, string lastName, string email, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) {
     int daysInCourse[Student::daysInCourseArraySize]{daysInCourse1, daysInCourse2, daysInCourse3};
     classRosterArray[++lastIndex] = new Student(studentID, firstName, lastName, email, age, daysInCourse, degreeProgram);
-    cout << "Student added to roster at row " << lastIndex + 1 << endl;
 }
 
 //prints student data
 void Roster::printAll() {
-    cout << "List of Student Data" << endl;
-    for (i = 0; i < Roster::lastIndex; i++) {
+    cout << "Displaying All Students:" << endl;
+    for (i = 0; i <= Roster::lastIndex; i++) {
         classRosterArray[i]->print();
     }
 }
@@ -93,7 +91,7 @@ void Roster::printAverageDaysInCourse(string studentID) {
     {
         if (classRosterArray[i]->getStudentID() == studentID)
         {
-            cout << studentID << ":";
+            cout << "Student ID: " << studentID << ", average days in course is: ";
             cout << (classRosterArray[i]->getDaysInCourse()[0] + classRosterArray[i]->getDaysInCourse()[1] + classRosterArray[i]->getDaysInCourse()[2]) / 3 << endl;
         }
     }
